@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,7 +39,7 @@
 
 .read-the-docs {
   color: #888;
-}
+} */
 
 .otp-input {
   text-align: center;
@@ -48,4 +48,17 @@
   margin: 10px;
   /* border-radius: 3px; */
   font-size: 50px;
+}
+
+.progressBar {
+  width: 700px;
+  border: 2px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.insideBar {
+  background-color: rgb(24, 254, 120);
+  text-align: center;
+  transition: .5s ease-in;
 }
