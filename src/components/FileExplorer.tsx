@@ -1,30 +1,33 @@
+import { useEffect, useState } from "react";
+import list from "../../JSON/FileExplorer.json";
+
 
 
 
 export default function FileExplorer() {
 
-    const File = [
-        { folder: ['file1', 'file2', 'file3'] },
-        { folder: ['file4', 'file5'] }
-    ]
 
+const [data,setData] = useState(list)
 
-
+const ListObject = ({node}:object[]) => {
+    const [isExpand,setIsExpand] = useState({})
+console.log(node)
+return (
+    node.map((item:any) => (
+        <div className="item">
+            {item.children && <span onClick={()=>setIsExpand((prev) => ({...prev,[item.name]:!prev[item.name]}))}>{isExpand.[item.name] ? '-':'+'}</span>}
+            <span>{item.name}</span>
+            {item.children && isExpand.[item.name] && <ListObject node={item.children} />}
+        </div>
+    ))
+)
+    
+}
     return (
         <>
             <h1>File Explorer</h1>
-            {
-                File.map((fol) => (
-                    <>
-                        <span>{'>'}</span>
-                    {fol.folder.map((item) => (
-                        <li>{item}</li>
-                        ))}
-                    </>
-
-
-                ))
-            }
+            <ListObject node={data}/>
+           
         </>
     )
 }

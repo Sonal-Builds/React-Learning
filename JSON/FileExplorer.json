@@ -1,0 +1,53 @@
+[
+    {
+        "id":1,
+        "name":"src",
+        "isFolder": true,
+        "children": [
+            {
+                "id":2,
+                "name":"index.js",
+                "isFolder": false
+            },
+            {
+                "id":3,
+                "name":"index.css",
+                "isFolder": false
+            }
+        ]
+    },
+    {
+        "id":4,
+        "name":"component",
+        "isFolder": true,
+        "children": [
+            {
+                "id":5,
+                "name":"FileExplorer",
+                "isFolder": true,
+                "children": [
+                    {
+                        "id":6,
+                        "name":"test.jsx",
+                        "isFolder": false
+                    },
+                    {
+                        "id":7,
+                        "name":"test.css",
+                        "isFolder": false
+                    }
+                ]
+            },
+            {
+                "id":8,
+                "name":"test.json",
+                "isFolder": false
+            }
+        ]
+    },
+    {
+        "id":9,
+        "name":"package.json",
+        "isFolder":false
+    }
+]
