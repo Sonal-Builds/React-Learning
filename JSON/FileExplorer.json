@@ -49,5 +49,34 @@
         "id":9,
         "name":"package.json",
         "isFolder":false
+    },
+    {
+        "id":10,
+        "name":"Public",
+        "isFolder": true,
+        "children": [
+            {
+                "id":11,
+                "name":"Media",
+                "isFolder": true,
+                "children": [
+                    {
+                        "id":12,
+                        "name":"test.jsx",
+                        "isFolder": false
+                    },
+                    {
+                        "id":13,
+                        "name":"test.css",
+                        "isFolder": false
+                    }
+                ]
+            },
+            {
+                "id":14,
+                "name":"test.json",
+                "isFolder": false
+            }
+        ]
     }
 ]

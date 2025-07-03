@@ -9,15 +9,15 @@ export default function FileExplorer() {
 
 const [data,setData] = useState(list)
 
-const ListObject = ({node}:object[]) => {
-    const [isExpand,setIsExpand] = useState({})
+const ListObject = ({node}:any) => {
+    const [isExpand,setIsExpand] = useState<{[key: string]: boolean}>({})
 console.log(node)
 return (
     node.map((item:any) => (
         <div className="item">
-            {item.children && <span onClick={()=>setIsExpand((prev) => ({...prev,[item.name]:!prev[item.name]}))}>{isExpand.[item.name] ? '-':'+'}</span>}
+            {item.children && <span onClick={()=>setIsExpand((prev) => ({...prev,[item.name]:!prev[item.name]}))}>{isExpand[item.name] ? '-':'+'}</span>}
             <span>{item.name}</span>
-            {item.children && isExpand.[item.name] && <ListObject node={item.children} />}
+            {item.children && isExpand[item.name] && <ListObject node={item.children} />}
         </div>
     ))
 )
