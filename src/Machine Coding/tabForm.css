@@ -1,0 +1,32 @@
+.body {
+    place-items: center;
+}
+.main-tab {
+    /* place-items: center; */
+    border: black 2px solid;
+    width: 500px;
+}
+
+.main-head {
+    display: flex;
+    justify-content: space-evenly;
+    border: green solid 2px;
+}
+
+.section {
+    padding: 5px;
+    border: green solid 2px;
+}
+
+.section-tab {
+    height: 200px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */ 
+    gap: 20px;
+}
+
+/* .item {
+    align-items: start;
+} */

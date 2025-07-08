@@ -6,6 +6,7 @@ import ProgressBar from './components/ProgressBar'
 import UseContextHook from './hooks/UseContext'
 import UseEffectHook from './hooks/UseEffect'
 import UseStateHook from './hooks/UseState'
+import TabForm from './Machine Coding/Tab Form Component/TabForm'
 
 export const userName = createContext('Sonal')
 function App() {
@@ -18,9 +19,10 @@ function App() {
        {/* <FileExplorer /> */}
        {/* <UseStateHook /> */}
        {/* <UseEffectHook /> */}
-       <userName.Provider value='Amala'>
+       {/* <userName.Provider value='Amala'>
           <UseContextHook />
-       </userName.Provider>
+       </userName.Provider> */}
+       <TabForm />
        
     </>
   )
