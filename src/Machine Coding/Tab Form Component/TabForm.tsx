@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '../tabForm.css'
+import './tabForm.css'
 import Profile from './Profile'
 import Interests from './Interests'
 import Settings from './Settings'
