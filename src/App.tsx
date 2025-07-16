@@ -8,6 +8,8 @@ import UseEffectHook from './hooks/UseEffect'
 import UseStateHook from './hooks/UseState'
 import TabForm from './Machine Coding/Tab Form Component/TabForm'
 import Autocomplete from './Machine Coding/Autocomplete Search Bar/AutoComplete'
+import ThrottledScroll from './Machine Coding/Autocomplete Search Bar/Test'
+import DragDrop from './Machine Coding/Drag&Drop/DragDrop'
 
 export const userName = createContext('Sonal')
 function App() {
@@ -24,7 +26,9 @@ function App() {
           <UseContextHook />
        </userName.Provider> */}
        {/* <TabForm /> */}
-       <Autocomplete />
+       {/* <Autocomplete /> */}
+       {/* <ThrottledScroll /> */}
+       <DragDrop />
        
     </>
   )
