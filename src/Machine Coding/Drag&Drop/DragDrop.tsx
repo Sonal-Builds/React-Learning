@@ -25,7 +25,7 @@ export default function DragDrop() {
           return result
   };
 
-  const handleDrop =(to:string,e:any) => {
+  const handleDrop = useCallback((to:string,e:any) => {
     // e.preventDefault();
     if(draggedfrom === to) {
       const list = to === "available" ? available : dropped;
@@ -53,7 +53,7 @@ export default function DragDrop() {
     }
     
     
-  }
+  },[draggedItem,draggedfrom,available,dropped])
 
   const handleDragStart = useCallback((item:any, from:any) => {
       setDraggedItem(item)
