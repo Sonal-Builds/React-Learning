@@ -7,6 +7,8 @@ const initialAvailable = [
   {id:'3',name:'Grape'},
   {id:'4',name:'Pinaple'},
   {id:'5',name:'Apple'},
+  {id:'6',name:'Cherry'},
+  {id:'7',name:'Kiwi'},
 
 ];
 
@@ -16,11 +18,29 @@ export default function DragDrop() {
   const [draggedItem, setDraggedItem] = useState<any>(null);
   const [draggedfrom, setDraggedfrom] = useState(null);
 
-  
+  const recorder = (list:any,dragedIndex:any, dropIndex:any) => {
+          const result = [...list];
+          const [removed] = result.splice(dragedIndex,1);
+          result.splice(dropIndex,0,removed);
+          return result
+  };
 
   const handleDrop =(to:string,e:any) => {
-    e.preventDefault();
-    if(to === draggedfrom) {
+    // e.preventDefault();
+    if(draggedfrom === to) {
+      const list = to === "available" ? available : dropped;
+      const dragedIndex = list.findIndex((x:any) => x.id === draggedItem.id)
+      const dropTargetId =  e.target.getAttribute("data-id")
+      const dropIndex = list.findIndex((x:any) => x.id === dropTargetId)
+
+     if(dropIndex === -1) {
+      return
+     }
+     if(dragedIndex !== dropIndex) {
+      const recordered = recorder(list,dragedIndex, dropIndex)
+      if(to === "available")  setAvailable(recordered); else setDropped(recordered)
+     }
+    
 
     } else {
       if(to === 'available') {
@@ -43,6 +63,7 @@ export default function DragDrop() {
   const renderItem = (item:any,from:any) => (
         <div 
           key={item.id} 
+          data-id={item.id}
           draggable 
           className="item"
           onDragStart={() => handleDragStart(item, from)}
@@ -50,13 +71,16 @@ export default function DragDrop() {
     )
 
 const resetLists = () => {
-
+  setAvailable(initialAvailable);
+  setDropped([])
+  setDraggedItem(null)
+  setDraggedfrom(null)
 }
    
   
     
 
-      console.log(dropped)
+      // console.log(dropped)
     
   return (
     <div className="main-div">

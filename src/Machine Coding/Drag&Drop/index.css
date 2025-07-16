@@ -103,18 +103,3 @@ h2 {
   transition: background-color 0.25s ease, box-shadow 0.25s ease;
   border: 1px solid transparent;
 }
-
-.item:active {
-  cursor: grabbing;
-  background-color: #e5e7eb;
-  box-shadow: 0 8px 16px rgb(100 116 139 / 0.2);
-  border-color: #9ca3af;
-}
-
-.empty {
-  color: #6b7280;
-  font-style: italic;
-  margin-top: 36px;
-  font-size: 1rem;
-  text-align: center;
-}
