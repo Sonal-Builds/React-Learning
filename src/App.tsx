@@ -10,6 +10,7 @@ import TabForm from './Machine Coding/Tab Form Component/TabForm'
 import Autocomplete from './Machine Coding/Autocomplete Search Bar/AutoComplete'
 import ThrottledScroll from './Machine Coding/Autocomplete Search Bar/Test'
 import DragDrop from './Machine Coding/Drag&Drop/DragDrop'
+import Accordion from './Machine Coding/Accordion'
 
 export const userName = createContext('Sonal')
 function App() {
@@ -28,7 +29,8 @@ function App() {
        {/* <TabForm /> */}
        {/* <Autocomplete /> */}
        {/* <ThrottledScroll /> */}
-       <DragDrop />
+       {/* <DragDrop /> */}
+       <Accordion />
        
     </>
   )
