@@ -11,6 +11,7 @@ import Autocomplete from './Machine Coding/Autocomplete Search Bar/AutoComplete'
 import ThrottledScroll from './Machine Coding/Autocomplete Search Bar/Test'
 import DragDrop from './Machine Coding/Drag&Drop/DragDrop'
 import Accordion from './Machine Coding/Accordion'
+import FetchUser from './components/FetchUser'
 
 export const userName = createContext('Sonal')
 function App() {
@@ -30,7 +31,8 @@ function App() {
        {/* <Autocomplete /> */}
        {/* <ThrottledScroll /> */}
        {/* <DragDrop /> */}
-       <Accordion />
+       {/* <Accordion /> */}
+       <FetchUser />
        
     </>
   )
