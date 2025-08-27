@@ -12,6 +12,8 @@ import ThrottledScroll from './Machine Coding/Autocomplete Search Bar/Test'
 import DragDrop from './Machine Coding/Drag&Drop/DragDrop'
 import Accordion from './Machine Coding/Accordion'
 import FetchUser from './components/FetchUser'
+import InfiniteList from './components/InfiniteList'
+import UserPagination from './Machine Coding/Pagination'
 
 export const userName = createContext('Sonal')
 function App() {
@@ -32,7 +34,9 @@ function App() {
        {/* <ThrottledScroll /> */}
        {/* <DragDrop /> */}
        {/* <Accordion /> */}
-       <FetchUser />
+       {/* <FetchUser /> */}
+       {/* <InfiniteList /> */}
+       <UserPagination />
        
     </>
   )
