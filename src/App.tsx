@@ -14,6 +14,7 @@ import Accordion from './Machine Coding/Accordion'
 import FetchUser from './components/FetchUser'
 import InfiniteList from './components/InfiniteList'
 import UserPagination from './Machine Coding/Pagination'
+import TablePagination from './Machine Coding/Pagination/TablePagination'
 
 export const userName = createContext('Sonal')
 function App() {
@@ -36,7 +37,8 @@ function App() {
        {/* <Accordion /> */}
        {/* <FetchUser /> */}
        {/* <InfiniteList /> */}
-       <UserPagination />
+       {/* <UserPagination /> */}
+       <TablePagination />
        
     </>
   )
