@@ -15,6 +15,7 @@ import FetchUser from './components/FetchUser'
 import InfiniteList from './components/InfiniteList'
 import UserPagination from './Machine Coding/Pagination'
 import TablePagination from './Machine Coding/Pagination/TablePagination'
+import MatchPair from './Machine Coding/MatchPair'
 
 export const userName = createContext('Sonal')
 function App() {
@@ -38,7 +39,8 @@ function App() {
        {/* <FetchUser /> */}
        {/* <InfiniteList /> */}
        {/* <UserPagination /> */}
-       <TablePagination />
+       {/* <TablePagination /> */}
+       <MatchPair />
        
     </>
   )

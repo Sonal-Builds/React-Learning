@@ -32,7 +32,7 @@ export default function TablePagination() {
         <div style={{margin:'0 auto', width:'50%'}}>
             <table border={1} style={{width:'100%'}}>
                 <thead>
-                    <tr style={{textAlign:'center'}}>
+                    <tr>
                         <th>Product ID</th>
                         <th>Product Title</th>
                         <th>Product Price</th>
@@ -41,7 +41,7 @@ export default function TablePagination() {
                 <tbody>
                     {
                         displayProduct.map((item:Products) => (
-                            <tr key={item.id}>
+                            <tr key={item.id} style={{textAlign:'center'}}>
                                 <td>{item.id}</td>
                                 <td>{item.title}</td>
                                 <td>{item.price}</td>
