@@ -1,47 +1,11 @@
-import { createContext, useContext } from 'react'
 import './App.css'
-import FileExplorer from './components/FileExplorer'
-import OtpInput from './components/OtpInput'
-import ProgressBar from './components/ProgressBar'
-import UseContextHook from './hooks/UseContext'
-import UseEffectHook from './hooks/UseEffect'
-import UseStateHook from './hooks/UseState'
-import TabForm from './Machine Coding/Tab Form Component/TabForm'
-import Autocomplete from './Machine Coding/Autocomplete Search Bar/AutoComplete'
-import ThrottledScroll from './Machine Coding/Autocomplete Search Bar/Test'
-import DragDrop from './Machine Coding/Drag&Drop/DragDrop'
-import Accordion from './Machine Coding/Accordion'
-import FetchUser from './components/FetchUser'
-import InfiniteList from './components/InfiniteList'
-import UserPagination from './Machine Coding/Pagination'
-import TablePagination from './Machine Coding/Pagination/TablePagination'
-import MatchPair from './Machine Coding/MatchPair'
+import SearchList from './Machine Coding/SearchList'
 
-export const userName = createContext('Sonal')
 function App() {
-
 
   return (
     <>
-       {/* <OtpInput />  */}
-       {/* <ProgressBar progress={50} /> */}
-       {/* <FileExplorer /> */}
-       {/* <UseStateHook /> */}
-       {/* <UseEffectHook /> */}
-       {/* <userName.Provider value='Amala'>
-          <UseContextHook />
-       </userName.Provider> */}
-       {/* <TabForm /> */}
-       {/* <Autocomplete /> */}
-       {/* <ThrottledScroll /> */}
-       {/* <DragDrop /> */}
-       {/* <Accordion /> */}
-       {/* <FetchUser /> */}
-       {/* <InfiniteList /> */}
-       {/* <UserPagination /> */}
-       {/* <TablePagination /> */}
-       <MatchPair />
-       
+       <SearchList />
     </>
   )
 }
