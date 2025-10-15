@@ -1,11 +1,10 @@
 import './App.css'
-import SearchList from './Machine Coding/SearchList'
-
+import Pagination from './Methods/Pagination'
 function App() {
 
   return (
     <>
-       <SearchList />
+       <Pagination />
     </>
   )
 }
