@@ -1,0 +1,31 @@
+import React, { useState } from "react";
+
+const TestApp = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div
+      style={{
+        padding: "20px",
+        fontFamily: "Arial, sans-serif",
+        textAlign: "center",
+      }}
+    >
+      <h1>React Test App</h1>
+      <p>Counter: {count}</p>
+
+      <button onClick={() => setCount(count + 1)}>
+        Increment
+      </button>
+
+      <button
+        onClick={() => setCount(0)}
+        style={{ marginLeft: "10px" }}
+      >
+        Reset
+      </button>
+    </div>
+  );
+};
+
+export default TestApp;
