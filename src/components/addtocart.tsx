@@ -36,7 +36,7 @@ const ShoppingCart = ({ cartItems, onRemoveFromCart }) => {
 };
 
 // App Component (main component managing products and cart)
-const App = () => {
+const Addtocart = () => {
   const [products] = useState([
     { id: 1, name: 'Laptop', price: 1200 },
     { id: 2, name: 'Mouse', price: 25 },
@@ -80,4 +80,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Addtocart;

@@ -43,7 +43,7 @@ function UserList() {
         🔄 Refresh
       </button>
       <ul>
-        {users.map((user) => (
+        {users && users.map((user) => (
           <li key={user.id}>
             <strong>{user.name}</strong> — {user.email}
           </li>
