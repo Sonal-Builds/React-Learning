@@ -1,8 +1,10 @@
 import { useQuery } from "@tanstack/react-query"
 import { useEffect, useState } from "react"
+import BackupUser from "./BackupUser"
 
 
 export default function FetchUser() {
+    const [click, setClick] = useState(false)
     // const [userList, setUserList] = useState([]);
     // useEffect(() => {
     //     async function fetchData() {
@@ -15,12 +17,16 @@ export default function FetchUser() {
 
     // }, [])
 
-    useQuery({
+    const {data: userList = [], isLoading, isSuccess, error, isError} = useQuery({
         queryKey: ['userList'],
-        q
+        queryFn: async () => {
+            const response = await fetch("https://jsonplaceholder.typicode.com/users")
+            return response.json();
+        },
+        enabled: click
     })
 
-    console.log(userList)
+    console.log(userList,isLoading, isSuccess, error, isError)
     return (
         <div
             style={{
@@ -35,11 +41,13 @@ export default function FetchUser() {
             }}
         >
             <h2 style={{ margin: 0 }}>User List</h2>
+            <button onClick={() => setClick(!click)}>Fetch User</button>
             <ul style={{ margin: 0, paddingLeft: '1.5rem' }}>
                 {userList.map((item: any) => (
                     <li key={item.id}>{item.name}</li>
                 ))}
             </ul>
+            <BackupUser />
         </div>
     )
 }
